@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;    
+}
+
+body {
+    background-image: url("assets/images/truck-g928085ebd_1920.jpg"); 
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;   
+}
+

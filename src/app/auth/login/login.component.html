@@ -1,0 +1,23 @@
+<div class="row space-top">
+    <div class="col-md-12">
+        <h1>Login User</h1>
+        <p>Please fill all fields.</p>
+    </div>
+</div>
+<form #form="ngForm" class="login" action="" method="post" (ngSubmit)="login(form)" autocomplete="off">
+    <fieldset>
+    
+        <p class="form-group">
+            <label class="form-control-label" for="email">Email</label>
+            <input #userEmail="ngModel" class="form-control" id="email" type="text" name="email" placeholder="peter@gmail.com" ngModel  required email>
+        </p>
+        <p class="form-group">
+            <label class="form-control-label" for="password">Password</label>
+            <input #userPassword="ngModel" class="form-control" id="password" type="password" name="password" id="password" placeholder="******" ngModel required password>
+        </p>
+        <button class="btn btn-primary" >Login</button>    
+    
+     </fieldset>
+</form>
+<a href="/register">register</a>
+

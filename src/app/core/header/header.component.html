@@ -1,0 +1,37 @@
+<header>
+<div class="nav-bar">
+    <div class="logo">
+        <span class="glyphicon glyphicon-road"></span>
+        <span class="logo">ng-13 CarGo</span>
+    </div>
+    <div class="navbar" *ngIf="!isLogged">
+        <ul>
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+            <li>
+                <a routerLink="/register">Register</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar" *ngIf="isLogged">
+        <ul>
+            <li (click)="logout()">Logout</li>  
+        </ul>
+    </div>
+</div>
+<nav>
+    <ul>
+        <li>
+            <a routerLink="/home">Home</a>
+        </li>
+        <li>
+            <a href="#">Loads</a>
+        </li>
+        <li>
+            <i class="fa-regular fa-truck-field"></i>
+            <a href="#"> Trucks</a>
+        </li>
+    </ul>
+</nav>
+</header>
