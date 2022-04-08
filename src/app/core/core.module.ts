@@ -7,6 +7,7 @@ import { UserService } from './user.service';
 import { storageServiceProvider } from './storage.service';
 import { LoadService } from './load.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TruckService } from './truck.service';
 
 
 
@@ -32,7 +33,8 @@ export class CoreModule {
       providers: [
         UserService,
         storageServiceProvider,
-        LoadService  
+        LoadService,
+        TruckService  
       ]
     }
   }

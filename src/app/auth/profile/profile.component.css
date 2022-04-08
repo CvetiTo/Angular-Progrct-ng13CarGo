@@ -1,7 +1,35 @@
+
+.my-profile {
+    width: 200%;
+    max-width: 500px;
+    margin: 2em auto 1rem;
+    padding: .5em;
+    border: .3em solid rgb(0, 255, 76);
+    border-radius: .5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(18, 87, 49);
+    background-color: rgba(206, 235, 173, 0.8);
+    box-shadow: 0 0 1em 0 #000;
+    text-align: center;
+}
 .green {
-    background-color: green;
+    background-color: rgb(23, 216, 23);
 }
 
-.red {
-    background-color: red; 
+
+.flex {
+    display: flex;
+}
+
+.flex p:first-child {
+    width: 35%;
+    text-align: right;
+    margin: .5em;
+}
+
+.flex p:last-child {
+    width: 55%;
+    text-align: left;
+    margin: .5em;
+    font-weight: bold;
 }

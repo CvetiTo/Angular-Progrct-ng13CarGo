@@ -1,20 +1,20 @@
-
-.load-list-item-container {
-    width: 100%;
+.truck-container {
+    width: 200%;
     max-width: 500px;
     margin: 2em auto 1rem;
     padding: .5em;
     border: .3em solid rgb(0, 255, 76);
     border-radius: .5rem;
     font-family: Georgia, serif;
-    font-size:small;
+    font-size: large;
     color: rgb(18, 87, 49);
     background-color: rgba(206, 235, 173, 0.8);
     box-shadow: 0 0 1em 0 #000;
     text-align: center;
 }
-a {
-    color: rgb(3, 138, 3);
+h2 {
+    color: rgb(5, 175, 5);
+    font-weight: bold;
 }
 
 
@@ -43,7 +43,7 @@ a {
 }
 .flex p:last-child {
     width: 75%;
-    text-align: right;
+    text-align: left;
     margin: .5em;
     font-weight: bold;
 }

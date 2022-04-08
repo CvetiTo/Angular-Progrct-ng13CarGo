@@ -1,13 +1,18 @@
+<div class="my-profile">
 <h1>{{username}}'s profile</h1>
    <form #ProfileForm="ngForm">
         <div class="flex">
-            <p>Username: <span>{{username}}</span></p>       
+            <p>Username: </p>
+            <p>{{username}}</p>       
         </div> 
         <div class="flex">
-            <p>Email: <span>{{email}}</span></p>       
+            <p>Email: </p>
+            <p>{{email}}</p>       
         </div>   
         <div class="flex">
-            <p>Telephone: <span>{{telephone}}</span></p>       
+            <p>Telephone: </p>
+            <p>{{telephone}}</p>       
         </div> 
-        <button type="button" routerLink="/loads" class="red">Back</button>   
+        <button type="button" routerLink="/loads" class="green">Back</button>   
     </form>
+</div>

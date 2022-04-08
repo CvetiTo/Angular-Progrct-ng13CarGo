@@ -1,17 +1,7 @@
-<tr>
-    <td> 
-       --- {{load?.loading}} ---
-        <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
-          
-    </td>
-    <td>
-       --- {{load?.unloading}} ---
-        <span  class="flag-icon flag-icon-gb flag-icon-squared"></span>   
-    </td>
-    <td>
-       --- {{load?.tons}}  ---                                    
-    </td>
-    <td>
-        <a [routerLink]="['/loads', load?._id]">Details</a>
-    </td>
-</tr><br/>
+<div class="load-list-item-container">
+    <div class="flex">    
+      <p>{{load?.loading}}<span class="flag-icon flag-icon-gb flag-icon-squared"></span></p>
+      <p>{{load?.unloading}}</p> 
+      <p>{{load?.tons}}</p>
+      <p><a [routerLink]="['/loads', load?._id]">Details</a> </p>      
+  </div>   

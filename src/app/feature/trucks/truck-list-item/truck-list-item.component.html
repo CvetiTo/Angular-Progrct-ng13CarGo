@@ -1,0 +1,7 @@
+<div class="truck-list-item-container">
+    <div class="flex">    
+      <p>{{truck?.loading}}<span class="flag-icon flag-icon-gb flag-icon-squared"></span></p>
+      <p>{{truck?.unloading}}</p> 
+      <p>{{truck?.tons}}</p>
+      <p><a [routerLink]="['/trucks', truck?._id]">Details</a> </p>      
+</div>

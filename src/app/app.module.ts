@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 
 import { PagesModule } from './feature/pages/pages.module';
 import { LoadsModule } from './feature/loads/loads.module';
+import { TrucksModule } from './feature/trucks/trucks.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoadsModule } from './feature/loads/loads.module';
     CoreModule.forRoot(),
     AppRoutingModule,
     LoadsModule,
+    TrucksModule,
     PagesModule,
     AuthModule
   ],

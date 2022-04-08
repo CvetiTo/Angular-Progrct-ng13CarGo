@@ -1,6 +1,6 @@
-  <div class="load-container"> 
-    <h2>Freight Offers</h2>
-    <div class="loads-header" *ngIf="loadList">
+<div class="truck-container"> 
+    <h2>Transport Offers</h2>
+    <div class="trucks-header" *ngIf="truckList">
       
         <div>
           <div class="flex">
@@ -11,11 +11,11 @@
         </div>   
       </div >
       <div >
-        <app-load-list-item *ngFor="let load of loadList" [load]="load"></app-load-list-item>
+        <app-truck-list-item *ngFor="let truck of truckList" [truck]="truck"></app-truck-list-item>
       </div>
     </div>   
   </div>   
 
-<div *ngIf="!loadList">
+<div *ngIf="!truckList">
   Loading...
 </div>
