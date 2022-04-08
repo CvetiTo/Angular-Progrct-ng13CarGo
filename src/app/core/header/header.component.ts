@@ -13,12 +13,12 @@ export class HeaderComponent {
     return this.userService.isLogged;
   }
 
-  get email(): string {
-    return this.userService.user?.email || '';
+  get username(): string {
+    return this.userService.user?.username || '';
   }
   constructor(private userService: UserService, private router: Router ) { }
 
-  logout(): void {
+  logoutHandler(): void {
     this.userService.logout().subscribe(() => {
       this.router.navigate(['/']);
     });

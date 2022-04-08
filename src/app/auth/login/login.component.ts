@@ -17,11 +17,11 @@ export class LoginComponent  {
 
 
   login(form: NgForm): void {
-    // TODO stoimenovg: validate user's data.
+    // TODO : validate user's data.
     //if(form.invalid) { return; }
-    const { email, password } = form.value;
+    const { username, password } = form.value;
     console.log(form.value)
-    this.userService.login({ email, password }).subscribe({
+    this.userService.login({ username, password }).subscribe({
       next: () => {
         //const redirectUrl = this.activatedRoute.snapshot.queryParams.redirectUrl || '/';
         this.router.navigate(['/home']);

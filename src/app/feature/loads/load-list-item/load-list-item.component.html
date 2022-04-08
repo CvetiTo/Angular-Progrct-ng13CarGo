@@ -1,0 +1,17 @@
+<tr>
+    <td> 
+       --- {{load?.loading}} ---
+        <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
+          
+    </td>
+    <td>
+       --- {{load?.unloading}} ---
+        <span  class="flag-icon flag-icon-gb flag-icon-squared"></span>   
+    </td>
+    <td>
+       --- {{load?.tons}}  ---                                    
+    </td>
+    <td>
+        <a [routerLink]="['/loads', load?._id]">Details</a>
+    </td>
+</tr><br/>

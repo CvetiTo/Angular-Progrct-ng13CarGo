@@ -5,7 +5,7 @@ import { IUser } from './interfaces/user';
 import { StorageService } from './storage.service';
 import { environment } from 'src/environments/environment';
 
-const apiUrl = 'http://localhost:3030';
+const apiUrl = environment.apiUrl;//'http://localhost:3030'
 
 @Injectable()
 export class UserService {
@@ -17,11 +17,17 @@ export class UserService {
   }
   constructor(private http: HttpClient) { }
 
- login(data: { email: string; password: string }) {
+ login(data: { username: string; password: string }) {
     return this.http.post<IUser>(`${apiUrl}/users/login`, data).pipe(
       tap((user) => this.user = user)
     );
   }
+
+  getProfile(): Observable<IUser> {
+    return this.http.get<IUser>(`${apiUrl}/users/profile`).pipe(tap((user) => this.user = user));
+    
+  }
+
   register(data: any): Observable<any> {
     return this.http.post(`${apiUrl}/users/register`, data);
   }

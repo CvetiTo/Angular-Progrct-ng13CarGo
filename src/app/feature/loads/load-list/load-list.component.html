@@ -1,0 +1,19 @@
+  <div class="load-container"> 
+    <table class="table loads" *ngIf="loadList">
+      <thead>
+        <tr>
+           <th scope="col">Loading</th>
+           <th scope="col">Unoading</th>
+           <th scope="col">Tons</th>
+           <th scope="col"></th>
+        </tr>
+      </thead >
+      <tbody >
+        <app-load-list-item *ngFor="let load of loadList" [load]="load"></app-load-list-item>
+      </tbody>
+     </table>   
+  </div>   
+
+<div *ngIf="!loadList">
+  Loading...
+</div>

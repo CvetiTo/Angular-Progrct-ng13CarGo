@@ -10,10 +10,11 @@
 
 body {
     background-image: url("assets/images/truck-g928085ebd_1920.jpg"); 
-    background-repeat: no-repeat;
-    background-color: #cccccc;
+    background-repeat: no-repeat, repeat;
+    background-color: #447781; 
     background-attachment: fixed;
     background-position: center; 
-    background-size: cover;   
+    background-size: cover; 
+    background-blend-mode: color-dodge;  
 }
 

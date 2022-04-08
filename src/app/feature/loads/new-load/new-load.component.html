@@ -1,0 +1,40 @@
+<div>
+    <h1>New load</h1>
+</div>
+
+<form #form="ngForm" (ngSubmit)="create(form)">
+    <fieldset>
+    <div class="new-loads">
+        <label for="loading">Loading</label>
+        <input #loading="ngModel" type="text" name="loading" ngModel required minlength="3" id="loading">
+        <ng-container *ngIf="loading.touched && loading.invalid">
+            <p *ngIf="loading.errors" class="error">
+                The field must be at least 3 simbols!
+            </p>
+            <p *ngIf="loading.errors" class="error">
+                
+            </p>
+        </ng-container>
+    </div>
+    <div class="new-load-unload">
+        <label for="unloading">Unloading</label>
+        <input type="text" name="unloading" ngModel required id="unloading">
+    </div>
+    <div class="new-load-starting">
+        <label for="startingFrom">Starting From</label>
+        <input type="text" name="startingFrom" ngModel required id="startingFrom">
+    </div>
+    <div class="new-load-tons">
+        <label for="tons">Tons</label>
+        <input type="number" name="tons" ngModel required id="tons">
+    </div>
+    <div class="new-load-price">
+        <label for="price">Price</label>
+        <input type="number" name="price" ngModel id="price">
+    </div>
+    <div>
+        <button routerLink="/loads">Cancel</button>
+        <button class="public">Offer</button>
+    </div>
+</fieldset>
+</form>

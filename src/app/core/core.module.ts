@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { UserService } from './user.service';
 import { storageServiceProvider } from './storage.service';
+import { LoadService } from './load.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +17,8 @@ import { storageServiceProvider } from './storage.service';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
@@ -28,7 +31,8 @@ export class CoreModule {
       ngModule: CoreModule,
       providers: [
         UserService,
-        storageServiceProvider 
+        storageServiceProvider,
+        LoadService  
       ]
     }
   }

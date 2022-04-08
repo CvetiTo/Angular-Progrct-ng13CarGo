@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 
 import { PagesModule } from './feature/pages/pages.module';
+import { LoadsModule } from './feature/loads/loads.module';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,19 @@ import { PagesModule } from './feature/pages/pages.module';
     RouterModule,
     CoreModule.forRoot(),
     AppRoutingModule,
+    LoadsModule,
     PagesModule,
     AuthModule
   ],
-  providers: [],
+  providers: [
+   //{
+   //    provide: APP_INITIALIZER,
+   //   useFactory: () => {
+//
+   //   },
+   //   multi: true
+   // }
+  ],
   bootstrap: [
     AppComponent,
     HeaderComponent,

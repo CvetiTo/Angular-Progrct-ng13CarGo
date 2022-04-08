@@ -20,7 +20,9 @@ export class RegisterComponent implements OnInit {
     private router: Router
   ) {
     this.form = this.fb.group({
+      username: '',
       email: '',
+      telephone: '',
       password: '',
       rePass: ''
     })
