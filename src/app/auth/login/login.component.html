@@ -5,8 +5,6 @@
     </div>
 </div>
 <form #form="ngForm" class="login" action="" method="post" (ngSubmit)="login(form)" autocomplete="off">
-    <fieldset>
-    
         <div class="form-group">
             <label class="form-control-label" for="username">Username</label>
             <input #userName="ngModel" class="form-control" id="username" type="text" name="username" placeholder="Peter" ngModel  required username>
@@ -15,9 +13,12 @@
             <label class="form-control-label" for="password">Password</label>
             <input #userPassword="ngModel" class="form-control" id="password" type="password" name="password" id="password" placeholder="******" ngModel required password>
         </div>
-        <button class="btn btn-primary" >Login</button>    
-    
-     </fieldset>
+        <button class="btn btn-primary" >Login</button>     
 </form>
-<a href="/register">register</a>
+<div>
+    <p>If you don't have an account go to :>>> <a routerLink="/register">register</a></p>
+    
+</div>
+
+
 

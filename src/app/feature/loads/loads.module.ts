@@ -8,6 +8,7 @@ import { NewLoadComponent } from './new-load/new-load.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
+import { LoadDetailsPageComponent } from './load-details-page/load-details-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {MatTableModule} from '@angular/material/table';
     LoadListComponent,
     LoadListItemComponent,
     LoadsPageComponent,
-    NewLoadComponent
+    NewLoadComponent,
+    LoadDetailsPageComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,9 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule, 
     HttpClientModule,
     MatTableModule
+  ],
+  exports: [
+    LoadListComponent
   ]
 })
 export class LoadsModule { }

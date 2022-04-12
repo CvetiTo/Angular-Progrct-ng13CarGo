@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ILoad } from 'src/app/core/interfaces';
+import { LoadService } from 'src/app/core/load.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() { }
+//loadList: ILoad[] | undefined;
+  constructor(private loadServise: LoadService) { }
 
   ngOnInit(): void {
+   // this.loadServise.loadLoadList().subscribe(loadList => {
+   //   this.loadList =  loadList;
+   // });
   }
 
 }
+ 
+
+  
+
+  
+  
+

@@ -33,14 +33,14 @@ export class RegisterComponent implements OnInit {
 
   register(): void {
     const data = this.form.value;
-    this.isLoading = true;
+    //this.isLoading = true;
     this.userService.register(data).subscribe({
         next: () => {
           this.router.navigate(['/']);
-          this.isLoading = false;
+          //this.isLoading = false;
         },
         error: (err) => {
-          this.isLoading = false;
+          //this.isLoading = false;
           console.error(err);
         }
       })

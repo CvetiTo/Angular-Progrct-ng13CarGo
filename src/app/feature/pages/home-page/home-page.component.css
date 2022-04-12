@@ -10,7 +10,8 @@ div {
     color: rgb(23, 54, 4);
 }
 
-p {
-    color: chartreuse;
+span {
+    color: rgb(7, 189, 16);
+    text-transform: capitalize;
 }
 

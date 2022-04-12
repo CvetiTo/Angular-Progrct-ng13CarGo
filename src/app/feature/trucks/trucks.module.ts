@@ -20,6 +20,9 @@ import { TrucksRoutingModule } from './trucks-routing.module';
     CommonModule,
     FormsModule,
     TrucksRoutingModule
+  ],
+  exports: [
+    TruckListComponent
   ]
 })
 export class TrucksModule { }
