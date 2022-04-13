@@ -1,7 +1,32 @@
 <div class="load-list-item-container">
-    <div class="flex">    
-      <p>{{load?.loading}}<span class="flag-icon flag-icon-gb flag-icon-squared"></span></p>
-      <p>{{load?.unloading}}</p> 
+    <div class="flex">
+      <p *ngIf="load?.loading == 'Bulgaria'">
+        <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
+        {{load?.loading}}</p>
+      <p *ngIf="load?.loading == 'Serbia'">
+        <span class="flag-icon flag-icon-rs flag-icon-squared"></span>
+        {{load?.loading}}</p> 
+      <p *ngIf="load?.loading == 'Romania'">
+        <span class="flag-icon flag-icon-ro flag-icon-squared"></span>
+        {{load?.loading}}</p>  
+      <p *ngIf="load?.loading == 'Germany'">
+        <span class="flag-icon flag-icon-de flag-icon-squared"></span>
+        {{load?.loading}}</p>  
+      <p *ngIf="load?.loading == 'France'">
+        <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+        {{load?.loading}}</p>       
+      <p *ngIf="load?.unloading == 'France'">
+        <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+        {{load?.unloading}}</p> 
+      <p *ngIf="load?.unloading == 'Serbia'">
+        <span class="flag-icon flag-icon-rs flag-icon-squared"></span>
+        {{load?.unloading}}</p> 
+      <p *ngIf="load?.unloading == 'Hungary'">
+        <span class="flag-icon flag-icon-hu flag-icon-squared"></span>
+        {{load?.unloading}}</p> 
+      <p *ngIf="load?.unloading == 'United Kingdom'">
+        <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
+        {{load?.unloading}}</p>     
       <p>{{load?.tons}}</p>
       <p><a [routerLink]="['/loads', load?._id]">Details</a> </p>      
   </div>   

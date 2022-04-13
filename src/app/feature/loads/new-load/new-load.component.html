@@ -6,7 +6,10 @@
     <fieldset>
     <div class="new-loads">
         <label for="loading">Loading</label>
-        <input #loading="ngModel" type="text" name="loading" ngModel required minlength="3" id="loading">
+        <input #loading="ngModel" type="text" name="loading" 
+        ngModel required minlength="3" id="loading">
+              
+      
         <ng-container *ngIf="loading.touched && loading.invalid">
             <p *ngIf="loading.errors" class="error">
                 The field must be at least 3 simbols!

@@ -1,7 +1,38 @@
 <div class="truck-list-item-container">
     <div class="flex">    
-      <p>{{truck?.loading}}<span class="flag-icon flag-icon-gb flag-icon-squared"></span></p>
-      <p>{{truck?.unloading}}</p> 
+      <p *ngIf="truck?.loading == 'Bulgaria'">
+        <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
+        {{truck?.loading}}</p>
+      <p *ngIf="truck?.loading == 'Serbia'">
+        <span class="flag-icon flag-icon-rs flag-icon-squared"></span>
+        {{truck?.loading}}</p>
+      <p *ngIf="truck?.loading == 'United Kingdom'">
+        <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
+        {{truck?.loading}}</p>   
+      <p *ngIf="truck?.loading == 'Romania'">
+        <span class="flag-icon flag-icon-ro flag-icon-squared"></span>
+        {{truck?.loading}}</p>  
+      <p *ngIf="truck?.loading == 'Germany'">
+        <span class="flag-icon flag-icon-de flag-icon-squared"></span>
+        {{truck?.loading}}</p>  
+      <p *ngIf="truck?.loading == 'France'">
+        <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+        {{truck?.loading}}</p>       
+      <p *ngIf="truck?.unloading == 'France'">
+        <span class="flag-icon flag-icon-fr flag-icon-squared"></span>
+        {{truck?.unloading}}</p> 
+      <p *ngIf="truck?.unloading == 'Serbia'">
+        <span class="flag-icon flag-icon-rs flag-icon-squared"></span>
+        {{truck?.unloading}}</p> 
+      <p *ngIf="truck?.unloading == 'Hungary'">
+        <span class="flag-icon flag-icon-hu flag-icon-squared"></span>
+        {{truck?.unloading}}</p> 
+      <p *ngIf="truck?.unloading == 'United Kingdom'">
+        <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
+        {{truck?.unloading}}</p>
+      <p *ngIf="truck?.unloading == 'Bulgaria'">
+        <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
+        {{truck?.unloading}}</p>   
       <p>{{truck?.tons}}</p>
       <p><a [routerLink]="['/trucks', truck?._id]">Details</a> </p>      
 </div>

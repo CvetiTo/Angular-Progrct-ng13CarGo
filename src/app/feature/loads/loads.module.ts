@@ -7,7 +7,6 @@ import { LoadsRoutingModule } from './loads-routing.module';
 import { NewLoadComponent } from './new-load/new-load.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table';
 import { LoadDetailsPageComponent } from './load-details-page/load-details-page.component';
 
 
@@ -24,7 +23,6 @@ import { LoadDetailsPageComponent } from './load-details-page/load-details-page.
     LoadsRoutingModule,
     FormsModule, 
     HttpClientModule,
-    MatTableModule
   ],
   exports: [
     LoadListComponent

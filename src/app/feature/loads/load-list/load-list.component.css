@@ -16,8 +16,9 @@ h2 {
     color: rgb(5, 175, 5);
     font-weight: bold;
 }
-
-
+h2 span {
+    color: rgb(83, 83, 13);
+}
 .flex {
     display: flex;
 }

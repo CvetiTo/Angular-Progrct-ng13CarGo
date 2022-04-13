@@ -3,7 +3,7 @@
     max-width: 500px;
     margin: 2em auto 1rem;
     padding: .5em;
-    border: .3em solid rgb(0, 255, 76);
+    border: .3em solid rgb(7, 128, 43);
     border-radius: .5rem;
     font-family: Georgia, serif;
     font-size: large;
@@ -13,8 +13,11 @@
     text-align: center;
 }
 h2 {
-    color: rgb(5, 175, 5);
+    color: rgb(7, 128, 43);
     font-weight: bold;
+}
+h2 span {
+    color: rgb(26, 195, 207);
 }
 
 
