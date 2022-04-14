@@ -1,26 +1,48 @@
-# CarGo
+# ng-13 CarGo
 
+Ng-13 CarGo is a simple application for the SoftUni Angular course. This is my project for the exam.
+ The application is for posting freight classifieds by persons, who need transportation for their freight and for posting transportation classifieds by persons, who offer transportation services.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Guests - not registered in users
 
-## Code scaffolding
+- View Home, Loads, Trucks pages and Login and Register pages;
+- View lists of Freight Offers and Transport Offers;
+- 
+### Users -  registered users
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- View Profile and Logout pages;
+- View Home, Loads, Trucks pages and New Load, New Truck pages;
+- Thay make write and public offers;
 
-## Build
+## Tehnologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Front-end
+
+- Angular CLI version 13.2.5
+- TypeScript
+- CSS
+- Bootstrap
+- Font-awesome
+
+### Back-end
+
+- Node.js
+- JavaScript
+- MongoDB
+- Mongoose
+- Nodemon
+- Express
+
+To start application you must install all dependencies for:
+- rest-service(npm -install), after that (nodemon start) and server start to `http://localhost:3030`;
+- client - run (ng serve) for other server, after that navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
