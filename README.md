@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - View Home, Loads, Trucks pages and Login and Register pages;
 - View lists of Freight Offers and Transport Offers;
-- 
+
 ### Users -  registered users
 
 - View Profile and Logout pages;
