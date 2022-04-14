@@ -6,6 +6,9 @@ import { NewTruckComponent } from './new-truck/new-truck.component';
 import { TrucksPageComponent } from './trucks-page/trucks-page.component';
 import { FormsModule } from '@angular/forms';
 import { TrucksRoutingModule } from './trucks-routing.module';
+import { TruckDetailsPageComponent } from './truck-details-page/truck-details-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -14,12 +17,15 @@ import { TrucksRoutingModule } from './trucks-routing.module';
     TruckListComponent,
     TruckListItemComponent,
     NewTruckComponent,
-    TrucksPageComponent
+    TrucksPageComponent,
+    TruckDetailsPageComponent,
+    
   ],
   imports: [
     CommonModule,
     FormsModule,
-    TrucksRoutingModule
+    TrucksRoutingModule,
+    HttpClientModule
   ],
   exports: [
     TruckListComponent

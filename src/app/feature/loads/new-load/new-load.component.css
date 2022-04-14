@@ -1,3 +1,36 @@
-.error {
-    color: red;
+form {
+    margin-bottom: 200rem;
+    display: block;
+    width: 150%;
+    padding: 3.5rem 3.5rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #124737;
+    background-color: rgba(191, 224, 153, 0.8);
+    background-clip: padding-box;
+    border: 0.1rem solid #ddf507;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-group {
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+button {
+    font-family: serif;
+    background-color: #206651;
+    color: rgba(191, 224, 153, 0.8);
+}
+
+div p{
+    color: rgb(184, 68, 149);
+}
+
+input {
+    margin-right: 30px;
+    font-size: large;
+    color: #0c2410;
 }

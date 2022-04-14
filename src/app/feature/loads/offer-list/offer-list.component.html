@@ -1,0 +1,16 @@
+<p>offer-list works!</p>
+<div *ngIf="offerList">
+    <div *ngFor="let offer of offerList" class="aside-theme">
+      <a href="#">
+        <h3>{{offer.loadId.startingFrom}}</h3>
+        <p>{{offer.text}}</p>
+        <p><span>{{offer.created_at}}</span></p>
+        <p><span>{{now | date: 'medium'}}</span></p>
+        <p><span>{{offer.created_at | date: 'medium'}}</span></p>
+      </a>
+    </div>
+    <div *ngIf="offerList.length === 0">No Posts!</div>
+  </div>
+  <div *ngIf="!offerList">
+    Loading...
+  </div>

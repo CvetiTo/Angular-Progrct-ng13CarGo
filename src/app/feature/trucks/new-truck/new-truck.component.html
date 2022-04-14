@@ -3,46 +3,46 @@
 </div>
 
 <form #form="ngForm" (ngSubmit)="create(form)">
-    <fieldset>
-    <div class="new-trucks">
-        <label for="loading">Loading</label>
-        <input #loading="ngModel" type="text" name="loading" ngModel required minlength="3" id="loading">
-        <ng-container *ngIf="loading.touched && loading.invalid">
-            <p *ngIf="loading.errors" class="error">
-                The field must be at least 3 simbols!
-            </p>
-            <p *ngIf="loading.errors" class="error">
-                
-            </p>
-        </ng-container>
+    <div class="row">
+        <div class="form-group">
+            <label class="form-control-label" for="loading">Loading</label>
+            <input class="form-control" #loading="ngModel" type="text" name="loading" ngModel required minlength="3" id="loading">
+            <ng-container *ngIf="loading.touched && loading.invalid">
+                <p *ngIf="loading.errors" class="error">
+                    The field must be at least 3 simbols!
+                </p>
+                <p *ngIf="loading.errors" class="error">
+
+                </p>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="unloading">Unloading</label>
+            <input class="form-control" type="text" name="unloading" ngModel required id="unloading">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="startingFrom">Starting from</label>
+            <input class="form-control" type="text" name="startingFrom" ngModel required id="startingFrom">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="validUntil">Valid until</label>
+            <input class="form-control" type="text" name="validUntil" ngModel required id="validUntil">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="type">Type</label>
+            <input class="form-control" type="text" name="type" ngModel required id="type">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="tons">Tons</label>
+            <input class="form-control" type="number" name="tons" ngModel required id="tons">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="price">Price</label>
+            <input class="form-control" type="number" name="price" ngModel id="price">
+        </div>
+        <div>
+            <button routerLink="/trucks">Cancel</button>
+            <button class="public">Offer</button>
+        </div> 
     </div>
-    <div class="new-truck-unload">
-        <label for="unloading">Unloading</label>
-        <input type="text" name="unloading" ngModel required id="unloading">
-    </div>
-    <div class="new-truck-starting">
-        <label for="startingFrom">Starting From</label>
-        <input type="text" name="startingFrom" ngModel required id="startingFrom">
-    </div>
-    <div class="new-truck-valid">
-        <label for="validUntil">Valid Until</label>
-        <input type="text" name="validUntil" ngModel required id="validUntil">
-    </div>
-    <div class="new-truck-type">
-        <label for="type">Type</label>
-        <input type="text" name="type" ngModel required id="type">
-    </div>
-    <div class="new-truck-tons">
-        <label for="tons">Tons</label>
-        <input type="number" name="tons" ngModel required id="tons">
-    </div>
-    <div class="new-truck-price">
-        <label for="price">Price</label>
-        <input type="number" name="price" ngModel id="price">
-    </div>
-    <div>
-        <button routerLink="/trucks">Cancel</button>
-        <button class="public">Offer</button>
-    </div>
-</fieldset>
 </form>

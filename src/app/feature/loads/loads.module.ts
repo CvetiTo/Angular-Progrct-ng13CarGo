@@ -8,6 +8,7 @@ import { NewLoadComponent } from './new-load/new-load.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadDetailsPageComponent } from './load-details-page/load-details-page.component';
+import { OfferListComponent } from './offer-list/offer-list.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { LoadDetailsPageComponent } from './load-details-page/load-details-page.
     LoadListItemComponent,
     LoadsPageComponent,
     NewLoadComponent,
-    LoadDetailsPageComponent
+    LoadDetailsPageComponent,
+    OfferListComponent
   ],
   imports: [
     CommonModule,

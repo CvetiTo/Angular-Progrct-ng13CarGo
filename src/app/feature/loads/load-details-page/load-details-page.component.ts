@@ -10,6 +10,7 @@ import { LoadService } from 'src/app/core/load.service';
 })
 export class LoadDetailsPageComponent implements OnInit {
 load: ILoad<IOffer> | undefined;
+isLogged: boolean = true;
   constructor(private loadServise: LoadService, 
     private activatedRoute: ActivatedRoute) { }
 

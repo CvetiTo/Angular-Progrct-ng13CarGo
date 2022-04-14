@@ -8,13 +8,14 @@ import { LoadService } from 'src/app/core/load.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-//loadList: ILoad[] | undefined;
+  //loadList: ILoad[] | undefined;
+  //@Input loadId: string;
   constructor(private loadServise: LoadService) { }
 
   ngOnInit(): void {
-   // this.loadServise.loadLoadList().subscribe(loadList => {
-   //   this.loadList =  loadList;
-   // });
+    //this.loadServise.loadLoadList(this.loadId, 5).subscribe(loadList => {
+    //  this.loadList =  loadList;
+    //});
   }
 
 }

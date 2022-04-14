@@ -4,24 +4,31 @@
   }
   
 main {
-  width: 30%;
+  width: 24%;
+  bottom: inherit;
 }
   
 aside {
-  width: 30%;
+  width: 24%;
   margin-top: 27em;
   font-size: 0.8em;
 }
 h1 {
     color: rgb(218, 186, 8);
+    position: absolute;
+   
 }
 
 h2 {
-    color: rgb(66, 124, 32);;
+    color: rgb(66, 124, 32);
+    position: absolute;
+    bottom: 800px;
 }
 
 div {
     color: rgb(23, 54, 4);
+    position: absolute;
+    bottom: 580pt;
 }
 
 span {

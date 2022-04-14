@@ -1,25 +1,26 @@
-<div class="details" *ngIf="!!load">
-    <h1>Load's details</h1>
-       <form #DetailsForm="ngForm">
+<p>truck-details-page works!</p>
+<div class="truck-details" >*ngIf="!!truck"
+    <h1>Truck's details</h1>
+       <form #TruckDetailsForm="ngForm">
             <div class="flex">
                 <p>Loading: </p>       
-                <p>{{load?.loading}}</p>
+                <p>{{truck?.loading}}</p>
             </div> 
             <div class="flex">
                 <p>Unloading:  </p>
-                <p>{{load?.unloading}}</p>       
+                <p>{{truck?.unloading}}</p>       
             </div>   
             <div class="flex">
                 <p>tons: </p>
-                <p>{{load?.tons}}</p>       
+                <p>{{truck?.tons}}</p>       
             </div> 
             <div class="flex">
                 <p>Price: </p>
-                <p>{{load?.price}}</p>       
+                <p>{{truck?.price}}</p>       
             </div> 
             <div class="flex">
                 <p>Starting from:  </p>
-                <p>{{load?.startingFrom}}</p>       
+                <p>{{truck?.startingFrom}}</p>       
             </div> 
             <div *ngIf="(isLogged)" class="offer-comment">
                 <p><span>Your</span> offer:</p>
@@ -28,6 +29,6 @@
                 </div>
             </div>
             <button type="button" class="green">Offer</button> 
-            <button type="button" routerLink="/loads" class="green-back">Back</button>   
+            <button type="button" routerLink="/trucks" class="green-back">Back</button>   
         </form>
     </div>

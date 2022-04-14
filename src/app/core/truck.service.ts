@@ -5,17 +5,14 @@ import { environment } from 'src/environments/environment';
 import { IOffer, ITruck } from './interfaces';
 const apiUrl = environment.apiUrl;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TruckService {
 
   constructor(public http: HttpClient) { }
-
+  
   create(body: {loading: string, unloading: string, 
-    startingFrom: string, validUntil: string, type: string, 
-    tons: number, price: number, 
-    owner: string}): Observable<ITruck> {
+    startingFrom: number, validUntil: number, type: string, 
+    tons: number, price: number}): Observable<ITruck> {
     console.log(body);
     return this.http.post<ITruck>(`${apiUrl}/data/trucks`, body);
   }
@@ -23,7 +20,7 @@ export class TruckService {
     return this.http.get<ITruck[]>(`${apiUrl}/data/trucks`);
   }
 
-  loadTruckById(id: string): Observable<ITruck<IOffer>> {
+  getById(id: string): Observable<ITruck<IOffer>> {
     return this.http.get<ITruck<IOffer>>(`${apiUrl}/data/trucks/${id}`);
   }
 }
