@@ -7,33 +7,68 @@
         <div class="form-group">
             <label class="form-control-label" for="loading">Loading</label>
             <input class="form-control" #loading="ngModel" type="text" name="loading" 
-            ngModel required minlength="3" id="loading">
-
-        
+            ngModel required minlength="3" pattern="[a-zA-Z]+ ?([a-zA-Z]+)?" id="loading">
             <ng-container *ngIf="loading.touched && loading.invalid">
-                <p *ngIf="loading.errors" class="error">
+                <p *ngIf="loading.errors?.['required']" class="error">
+                    The field must be required!
+                </p>
+                <p *ngIf="loading.errors?.['minlength']" class="error">
                     The field must be at least 3 simbols!
                 </p>
-                <p *ngIf="loading.errors" class="error">
-
+                <p *ngIf="loading.errors?.['pattern']" class="error">
+                    The field must contain only english letters!
                 </p>
             </ng-container>
         </div>
         <div class="form-group">
             <label class="form-control-label" for="unloading">Unloading</label>
-            <input class="form-control" type="text" name="unloading" ngModel required id="unloading">
+            <input #unloading="ngModel" class="form-control" type="text" name="unloading"
+             ngModel required minlength="3" pattern="[a-zA-Z]+ ?([a-zA-Z]+)?" id="unloading">
+            <ng-container *ngIf="unloading.touched && unloading.invalid">
+                <p *ngIf="unloading.errors?.['required']" class="error">
+                    The field must be required!
+                </p>
+                <p *ngIf="unloading.errors?.['minlength']" class="error">
+                    The field must be at least 3 simbols!
+                </p>
+                <p *ngIf="unloading.errors?.['pattern']" class="error">
+                    The field must contain only english letters!
+                </p>
+            </ng-container>
         </div>
         <div class="form-group">
             <label class="form-control-label" for="startingFrom">Starting From</label>
-            <input class="form-control" type="text" name="startingFrom" ngModel required id="startingFrom">
+            <input #startingFrom="ngModel" class="form-control" type="date" name="startingFrom" ngModel required id="startingFrom">
+            <ng-container *ngIf="startingFrom.touched && startingFrom.invalid">
+                <p *ngIf="startingFrom.errors?.['required']" class="error">
+                    The field must be required!
+                </p>
+            </ng-container>
         </div>
         <div class="form-group">
             <label class="form-control-label" for="tons">Tons</label>
-            <input class="form-control" type="number" name="tons" ngModel required id="tons">
+            <input #tons="ngModel" class="form-control" type="number" name="tons" ngModel 
+            required min="0.1" id="tons">
+            <ng-container *ngIf="tons.touched && tons.invalid">
+                <p *ngIf="tons.errors?.['required']" class="error">
+                    The field must be required and contain only numbers!
+                </p>
+                <p *ngIf="tons.errors?.['min']" class="error">
+                    The tons must be at least 0.1!
+                </p>
+            </ng-container>
         </div>
         <div class="form-group">
             <label class="form-control-label" for="price">Price</label>
-            <input class="form-control" type="number" name="price" ngModel id="price">
+            <input #price="ngModel" class="form-control" type="number" name="price" ngModel required min="0" id="price">
+            <ng-container *ngIf="price.touched && price.invalid">
+                <p *ngIf="price.errors?.['required']" class="error">
+                    The field must be required and contain only numbers!
+                </p>
+                <p *ngIf="price.errors?.['min']" class="error">
+                    The price must be at least 0!
+                </p>
+            </ng-container>
         </div>
         <div>
             <button routerLink="/loads">Cancel</button>

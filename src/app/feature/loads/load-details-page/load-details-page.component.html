@@ -15,7 +15,7 @@
             </div> 
             <div class="flex">
                 <p>Price: </p>
-                <p>{{load?.price}}</p>       
+                <p>${{load?.price}}</p>       
             </div> 
             <div class="flex">
                 <p>Starting from:  </p>
@@ -24,7 +24,7 @@
             <div *ngIf="(isLogged)" class="offer-comment">
                 <p><span>Your</span> offer:</p>
                 <div class="answer"> 
-                    <textarea name="offerText" id="offerText" cols="30" rows="10"></textarea>     
+                    <textarea name="offerText" id="offerText" cols="40" rows="5"></textarea>     
                 </div>
             </div>
             <button type="button" class="green">Offer</button> 

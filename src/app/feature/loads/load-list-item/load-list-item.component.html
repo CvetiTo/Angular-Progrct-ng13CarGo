@@ -26,7 +26,10 @@
         {{load?.unloading}}</p> 
       <p *ngIf="load?.unloading == 'United Kingdom'">
         <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
-        {{load?.unloading}}</p>     
+        {{load?.unloading}}</p>
+      <p *ngIf="load?.unloading == 'Romania'">
+        <span class="flag-icon flag-icon-ro flag-icon-squared"></span>
+        {{load?.unloading}}</p>         
       <p>{{load?.tons}}</p>
       <p><a [routerLink]="['/loads', load?._id]">Details</a> </p>      
   </div>   

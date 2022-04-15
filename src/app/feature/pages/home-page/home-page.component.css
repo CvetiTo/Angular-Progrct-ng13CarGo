@@ -2,21 +2,12 @@
     display: flex;
     justify-content: space-around;
   }
-  
-main {
-  width: 24%;
-  bottom: inherit;
-}
-  
-aside {
-  width: 24%;
-  margin-top: 27em;
-  font-size: 0.8em;
+.container {
+  width: 1000pt;
 }
 h1 {
     color: rgb(218, 186, 8);
     position: absolute;
-   
 }
 
 h2 {
@@ -26,9 +17,15 @@ h2 {
 }
 
 div {
-    color: rgb(23, 54, 4);
+    color: rgb(44, 109, 3);
     position: absolute;
-    bottom: 580pt;
+    bottom: 580pt;  
+}  
+ 
+aside {
+  width: 24%;
+  margin-top: 27em;
+  font-size: 0.4em;
 }
 
 span {

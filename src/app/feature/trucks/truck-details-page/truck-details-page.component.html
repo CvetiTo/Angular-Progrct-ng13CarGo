@@ -1,5 +1,4 @@
-<p>truck-details-page works!</p>
-<div class="truck-details" >*ngIf="!!truck"
+<div class="truck-details" *ngIf="!!truck">
     <h1>Truck's details</h1>
        <form #TruckDetailsForm="ngForm">
             <div class="flex">
@@ -9,23 +8,32 @@
             <div class="flex">
                 <p>Unloading:  </p>
                 <p>{{truck?.unloading}}</p>       
-            </div>   
-            <div class="flex">
-                <p>tons: </p>
-                <p>{{truck?.tons}}</p>       
-            </div> 
-            <div class="flex">
-                <p>Price: </p>
-                <p>{{truck?.price}}</p>       
-            </div> 
+            </div>  
             <div class="flex">
                 <p>Starting from:  </p>
                 <p>{{truck?.startingFrom}}</p>       
             </div> 
+            <div class="flex">
+                <p>Valid until:  </p>
+                <p>{{truck?.validUntil}}</p>       
+            </div>
+            <div class="flex">
+                <p>Type:  </p>
+                <p>{{truck?.type}}</p>       
+            </div> 
+            <div class="flex">
+                <p>Tons: </p>
+                <p>{{truck?.tons}}</p>       
+            </div> 
+            <div class="flex">
+                <p>Price: </p>
+                <p>${{truck?.price}}</p>       
+            </div> 
+             
             <div *ngIf="(isLogged)" class="offer-comment">
                 <p><span>Your</span> offer:</p>
                 <div class="answer"> 
-                    <textarea name="offerText" id="offerText" cols="30" rows="10"></textarea>     
+                    <textarea name="offerText" id="offerText" cols="40" rows="5"></textarea>     
                 </div>
             </div>
             <button type="button" class="green">Offer</button> 

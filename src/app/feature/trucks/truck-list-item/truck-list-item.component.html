@@ -6,6 +6,21 @@
       <p *ngIf="truck?.loading == 'Serbia'">
         <span class="flag-icon flag-icon-rs flag-icon-squared"></span>
         {{truck?.loading}}</p>
+        <p *ngIf="truck?.loading == 'Argentina'">
+          <span class="flag-icon flag-icon-ar flag-icon-squared"></span>
+          {{truck?.loading}}</p>
+          <p *ngIf="truck?.loading == 'Estonia'">
+            <span class="flag-icon flag-icon-ee flag-icon-squared"></span>
+            {{truck?.loading}}</p>  
+        <p *ngIf="truck?.loading == 'Greece'">
+          <span class="flag-icon flag-icon-gr flag-icon-squared"></span>
+          {{truck?.loading}}</p> 
+        <p *ngIf="truck?.loading == 'Macedonia'">
+          <span class="flag-icon flag-icon-mk flag-icon-squared"></span>
+          {{truck?.loading}}</p>  
+        <p *ngIf="truck?.loading == 'Albania'">
+          <span class="flag-icon flag-icon-al flag-icon-squared"></span>
+          {{truck?.loading}}</p>  
       <p *ngIf="truck?.loading == 'United Kingdom'">
         <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
         {{truck?.loading}}</p>   
@@ -30,8 +45,23 @@
       <p *ngIf="truck?.unloading == 'United Kingdom'">
         <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
         {{truck?.unloading}}</p>
+      <p *ngIf="truck?.unloading == 'Brazil'">
+        <span class="flag-icon flag-icon-br flag-icon-squared"></span>
+        {{truck?.unloading}}</p> 
+        <p *ngIf="truck?.unloading == 'Italy'">
+          <span class="flag-icon flag-icon-it flag-icon-squared"></span>
+          {{truck?.unloading}}</p> 
+          <p *ngIf="truck?.unloading == 'Russian Federation'">
+            <span class="flag-icon flag-icon-ru flag-icon-squared"></span>
+            {{truck?.unloading}}</p>  
+        <p *ngIf="truck?.unloading == 'Austria'">
+          <span class="flag-icon flag-icon-at flag-icon-squared"></span>
+          {{truck?.unloading}}</p>   
       <p *ngIf="truck?.unloading == 'Bulgaria'">
         <span class="flag-icon flag-icon-bg flag-icon-squared"></span>
+        {{truck?.unloading}}</p>    
+      <p *ngIf="truck?.unloading == 'Monaco'">
+        <span class="flag-icon flag-icon-mc flag-icon-squared"></span>
         {{truck?.unloading}}</p>   
       <p>{{truck?.tons}}</p>
       <p><a [routerLink]="['/trucks', truck?._id]">Details</a> </p>      

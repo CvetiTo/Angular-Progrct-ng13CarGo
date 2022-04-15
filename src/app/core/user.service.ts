@@ -28,8 +28,8 @@ export class UserService {
     
   }
 
-  register(data: any): Observable<any> {
-    return this.http.post(`${apiUrl}/users/register`, data);
+  register(data:{ username: string; password: string }): Observable<IUser> {
+    return this.http.post<IUser>(`${apiUrl}/users/register`, data);
   }
 
   logout() {
