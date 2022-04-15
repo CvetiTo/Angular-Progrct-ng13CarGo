@@ -10,46 +10,32 @@ const apiUrl = environment.apiUrl;//'http://localhost:3030'
 @Injectable()
 export class UserService {
 
-  user: IUser | null | undefined = undefined;
-
-  get isLogged(): boolean {
-    return !!this.user;
-  }
-  constructor(private http: HttpClient) { }
-
- login(data: { username: string; password: string }) {
-    return this.http.post<IUser>(`${apiUrl}/users/login`, data).pipe(
-      tap((user) => this.user = user)
-    );
-  }
-
-  getProfile(): Observable<IUser> {
-    return this.http.get<IUser>(`${apiUrl}/users/profile`).pipe(tap((user) => this.user = user));
-    
-  }
-
-  register(data:{ username: string; password: string }): Observable<IUser> {
-    return this.http.post<IUser>(`${apiUrl}/users/register`, data);
-  }
-
-  logout() {
-    return this.http.post<IUser>(`${apiUrl}/users/logout`, {}).pipe(
-      tap(() => this.user = null)
-    );
-  }
-
-
-
+  isLogged: boolean = false;
   
-  //logout() {
-  //      return this.http.post(`${apiUrl}/users/logout`, {}, {withCredentials: true} );
-  //    }
-
-//  register(data: { email: string; password: string }) {
-//    return this.http.post<IUser>(`/api/users/register`, data).pipe(
-//      tap((user) => this.user = user)
-//    );
-//  }
-//
-//  
+ user: IUser | null | undefined = undefined;
+ 
+ constructor(private http: HttpClient) { }
+  login(data: { username: string; password: string }) {
+  this.isLogged = true;
+  //console.log(localStorage);
+   return this.http.post<IUser>(`${apiUrl}/users/login`, data).pipe(
+     tap((user) => this.user = user)
+   );
+ }
+ getProfile() {
+   return this.http.get<IUser>(`${apiUrl}/users/profile`).pipe(tap((user) => this.user = user));
+   
+ }
+ register(data:{ username: string; password: string }): Observable<IUser> {
+   return this.http.post<IUser>(`${apiUrl}/users/register`, data);
+ }
+ logout() {
+  this.isLogged = false;
+  localStorage.clear();
+  //console.log(localStorage);
+   return this.http.post<IUser>(`${apiUrl}/users/logout`, {}).pipe(
+     tap(() => this.user = null)
+   );
+ }
+ 
 }

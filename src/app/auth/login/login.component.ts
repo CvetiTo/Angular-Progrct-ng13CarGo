@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/core/user.service';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -15,15 +16,13 @@ export class LoginComponent  {
 
    }
 
-
-  login(form: NgForm): void {
-    // TODO : validate user's data.
-    //if(form.invalid) { return; }
+  handlelogin(form: NgForm): void {
+    if(form.invalid) { return; }
     const user = form.value;
-    console.log(form.value)
+    //console.log(form.value)
     this.userService.login(user).subscribe({
       next: user => {
-        console.log(user)
+        console.log(user._id)
         this.router.navigate(['/home']);
       },
       error: (err) => {

@@ -4,7 +4,7 @@
         <p>Please fill all fields.</p>
     </div>
 </div>
-<form #form="ngForm" class="login" action="" method="post" (ngSubmit)="login(form)" autocomplete="off">
+<form #form="ngForm" class="login" action="" method="post" (ngSubmit)="handlelogin(form)" autocomplete="off">
         <div class="form-group">
             <label class="form-control-label" for="username">Username</label>
             <input #userName="ngModel" class="form-control" id="username" type="text"
@@ -26,13 +26,13 @@
             <label class="form-control-label" for="password">Password</label>
             <input #password="ngModel" class="form-control" id="password" type="password"
              name="password" id="password" placeholder="******" ngModel required 
-             pattern="^\w{3,16}$" >
+             minlength="3" >
              <ng-container *ngIf="password.touched && password.invalid">
                 <p *ngIf="password.errors?.['required']" class="error">
                     Password is required!  
                 </p>
-                <p *ngIf="password.errors?.['pattern']" class="error">
-                    The password must be between 3 and 16 symbols - only letters and digits!
+                <p *ngIf="password.errors?.['minlength']" class="error">
+                    The password must be at least 3 symbols!
                 </p>
               </ng-container> 
         </div>

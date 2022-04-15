@@ -11,7 +11,7 @@ export class LoadService {
   constructor(public http: HttpClient) { }
 
   create(body: {loading: string, unloading: string, startingFrom: string, tons: number, price: number, owner: string}): Observable<ILoad> {
-    console.log(body);
+    //console.log(body);
     return this.http.post<ILoad>(`${apiUrl}/data/loads`, body);
   }
   loadLoadList(): Observable<ILoad[]> {

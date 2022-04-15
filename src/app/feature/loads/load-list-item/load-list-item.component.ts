@@ -15,7 +15,7 @@ export class LoadListItemComponent implements OnChanges {
   constructor( private userService: UserService) { }
  
   ngOnChanges(): void {
-    console.log(this.load);
+    //console.log(this.load);
     //this.canSubscribe = !this.load;
   }
 

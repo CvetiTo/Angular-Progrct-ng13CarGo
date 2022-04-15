@@ -17,25 +17,21 @@ export class HeaderComponent {
   get username(): string {
     return this.userService.user?.username || '';
   }
-  isLoggingOut : boolean = false;
+  
   constructor(private userService: UserService, private router: Router ) { }
 
   logout(): void {
-    if(this.isLoggingOut) {
-      return;
-    }
-    this.isLoggingOut = true;
-    this.userService.logout().subscribe({
-      next: arg => {
-        console.log(arg);
-      },
-      complete:() => {
-        this.isLoggingOut = false;
+   this.userService.logout().subscribe({
+     next: arg => {
+       console.log(arg);
+     },
+     complete:() => {
         this.router.navigate(['/']);
       },
       error: () => {
-        this.isLoggingOut=false;  
+        
       }
-  });
-}
+    });
+  }
+
 }

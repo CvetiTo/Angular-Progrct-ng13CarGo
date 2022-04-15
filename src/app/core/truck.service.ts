@@ -13,7 +13,7 @@ export class TruckService {
   create(body: {loading: string, unloading: string, 
     startingFrom: number, validUntil: number, type: string, 
     tons: number, price: number}): Observable<ITruck> {
-    console.log(body);
+    //console.log(body);
     return this.http.post<ITruck>(`${apiUrl}/data/trucks`, body);
   }
   loadTruckList(): Observable<ITruck[]> {

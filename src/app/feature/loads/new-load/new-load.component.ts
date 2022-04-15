@@ -20,10 +20,10 @@ export class NewLoadComponent implements OnInit {
 
   create(form: NgForm): void {
     if(form.invalid) { return; }
-    console.log(form.value);
+    //console.log(form.value);
     this.loadService.create(form.value).subscribe({
       next: (load) => {
-        console.log(load);
+        //console.log(load);
         this.router.navigate(['/loads']);
       },
       error: (error) => {

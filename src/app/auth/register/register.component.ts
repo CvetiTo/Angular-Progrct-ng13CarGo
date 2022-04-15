@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/core/user.service';
 
@@ -11,57 +11,59 @@ import { UserService } from 'src/app/core/user.service';
 export class RegisterComponent implements OnInit {
 
   form: FormGroup;
-
-  isLoading = false;
-
+  
+  isLogged = false;
+  
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
     private router: Router
   ) {
     this.form = this.fb.group({
-      username: '',
-      email: '',
-      telephone: '',
-      password: '',
-      rePass: ''
+      username: ['', [Validators.required,Validators.minLength(3),  Validators.pattern("[a-zA-Z]+ ?([a-zA-Z]+)?")]],
+      email: ['', [Validators.required, Validators.pattern("^([a-zA-Z]+)@([a-zA-Z]+)\.([a-zA-Z]+)$")]],
+      telephone: ['', [Validators.required,Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(3), ]],
+      rePass: ['', [Validators.required,  ]]
     })
    }
 
   ngOnInit(): void {
   }
-
+  onPasswordChange() {
+    if (this.rePass.value == this.password.value) {
+      this.rePass.setErrors(null);
+    } else {
+      this.rePass.setErrors({ mismatch: true });
+    }
+  }
+  
+  // getting the form control elements
+  get password(): AbstractControl {
+    return this.form.controls['password'];
+  }
+  
+  get rePass(): AbstractControl {
+    return this.form.controls['rePass'];
+  }
+  
   register(): void {
     const data = this.form.value;
-    this.isLoading = true;
+    this.isLogged = true;
     this.userService.register(data).subscribe({
         next: () => {
-          this.router.navigate(['/']);
-          this.isLoading = true;
+          this.isLogged = true;
+          this.router.navigate(['/']); 
         },
         error: (err) => {
-          this.isLoading = false;
+          this.isLogged = false;
           console.error(err);
         }
       })
     }
-   //(() => {
-   //  this.isLoading = false;
-   //  this.router.navigate(['/login']);
-   //})
-
-  //  if (this.form.invalid) { return; }
-  //  this.userService.register(this.form.value).subscribe({
-  //    next: () => {
-  //      this.router.navigate(['/']);
-  //    },
-  //    error: (err) => {
-  //      console.error(err);
-  //    }
-  //  })
-  //}
-
+   
   clearForm(): void {
     this.form.reset();
   }
+  
 }
